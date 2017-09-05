@@ -7,7 +7,7 @@ Journal.prototype.countWords = function(entry) {
   var arrayOfWords = entry.split(" ");
   var numOfWords = arrayOfWords.length;
   return numOfWords;
-}
+};
 
 Journal.prototype.countVowels = function(entry) {
   var numOfVowels = 0;
@@ -21,7 +21,7 @@ Journal.prototype.countVowels = function(entry) {
     }
   }
   return numOfVowels;
-}
+};
 
 Journal.prototype.countConsonants = function(entry) {
   var numOfConsonants = 0;
@@ -37,7 +37,7 @@ Journal.prototype.countConsonants = function(entry) {
     }
   }
   return numOfConsonants;
-}
+};
 
 Journal.prototype.teaser = function(entry) {
   var arrayOfWords = entry.split(" ");
@@ -48,8 +48,9 @@ Journal.prototype.teaser = function(entry) {
     for(i=0; i<8; i++){
       teaserString = teaserString.concat(arrayOfWords[i], " ");
     }
+    teaserString = teaserString + "...";
   } else {
     teaserString = entry;
   }
   return teaserString;
-}
+};
