@@ -15,7 +15,7 @@ $(document).ready(function() {
     // console.log(numOfVowelsOutput);
     // console.log(numOfConsonantsOutput);
     // console.log(teaserOutput);
-    $('#entries').prepend('<p>Entry Title:' + title + 'Entry text' + entry + '</p>');
+    $("#entries").prepend('<p>Entry Title:' + title + 'Entry text' + entry + '</p>');
 
     });
   });
