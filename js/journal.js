@@ -54,3 +54,5 @@ Journal.prototype.teaser = function(entry) {
   }
   return teaserString;
 };
+
+exports.journalModule = Journal;
