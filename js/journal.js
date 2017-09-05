@@ -4,21 +4,19 @@ function Journal(title, entry){
 }
 
 Journal.prototype.countWords = function(entry) {
-  arrayOfWords = entry.split(" ");
-  numOfWords = arrayOfWords.length;
+  var arrayOfWords = entry.split(" ");
+  var numOfWords = arrayOfWords.length;
   return numOfWords;
 }
 
 Journal.prototype.countVowels = function(entry) {
-  debugger;
-  numOfVowels = 0;
-  arrayOfVowels = ["a", "e", "i", "o", "u"];
-  concatString = entry.split(" ").join("");
-  arrayOfChars = concatString.split("");
+  var numOfVowels = 0;
+  var arrayOfVowels = ["a", "e", "i", "o", "u"];
+  var concatString = entry.split(" ").join("");
+  var lowerCaseString = concatString.toLowerCase();
+  var arrayOfChars = lowerCaseString.split("");
   for(i=0 ; i < arrayOfChars.length ; i++){
-    if(arrayOfVowels.includes("a") == true){
-      currentLetter = i;
-      console.log(currentLetter);
+    if(arrayOfVowels.indexOf(arrayOfChars[i]) >= 0){
       numOfVowels += 1;
     }
   }
@@ -26,32 +24,32 @@ Journal.prototype.countVowels = function(entry) {
 }
 
 Journal.prototype.countConsonants = function(entry) {
-  numOfConsonants = 0;
-  numOfVowels = 0;
-  arrayOfVowels = ["a", "e", "i", "o", "u"];
-  concatString = entry.split(" ").join("");
-  arrayOfChars = concatString.split("");
+  var numOfConsonants = 0;
+  var numOfVowels = 0;
+  var arrayOfVowels = ["a", "e", "i", "o", "u"];
+  var concatString = entry.split(" ").join("");
+  var lowerCaseString = concatString.toLowerCase();
+  var arrayOfChars = lowerCaseString.split("");
+  console.log(arrayOfChars);
   for(i=0 ; i < arrayOfChars.length ; i++){
-    if(arrayOfVowels.includes(i) == true){
-      numOfVowels += 1;
-    } else {
+    if(arrayOfVowels.indexOf(arrayOfChars[i]) < 0){
       numOfConsonants += 1;
-        debugger;
     }
   }
   return numOfConsonants;
 }
 
 Journal.prototype.teaser = function(entry) {
-  arrayOfWords = entry.split(" ");
-  teaserString = "";
-  numOfWords = arrayOfWords.length;
-  if (arrayOfWords > 8){
-    for(i=0; i=7; i++){
-      teaserString = teaserString+ i ;
-        debugger;
+  var arrayOfWords = entry.split(" ");
+  var teaserString = "";
+  var numOfWords = arrayOfWords.length;
+  console.log(numOfWords);
+  if (numOfWords >= 8){
+    for(i=0; i<8; i++){
+      teaserString = teaserString.concat(arrayOfWords[i], " ");
     }
+  } else {
+    teaserString = entry;
   }
+  return teaserString;
 }
-
-    // return arrayOfWords[1]+arrayOfWords[2]+arrayOfWords[3]+ arrayOfWords[4]+ arrayOfWords[5]+ arrayOfWords[6]+ arrayOfWords[7]+ arrayOfWords[8];

@@ -2,13 +2,14 @@
 <html>
   <head>
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="js/journal-interface.js"></script>
     <script type="text/javascript" src="js/journal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
     <meta charset="utf-8">
     <title>Journal</title>
   </head>
   <body>
-    <h1>Journal</h1>
+    <h1>Make a new journal entry</h1>
     <form id="journal">
       <label for="title">Entry Title:</label>
       <input id="title" type="text">
@@ -16,5 +17,10 @@
       <input id="entry" type="text">
       <button type="submit">Submit</button>
     </form>
+
+    Journal Entries:
+    <div class="entries">
+    </div>
+    
   </body>
 </html>
