@@ -13,7 +13,12 @@ $(document).ready(function() {
     var consonantCount = journal.countConsonants(entry);
     var teaserOutput = journal.teaser(entry);
 
+    $("#entries").append(moment());
     $("#entries").prepend('<p>Entry Title: ' + title + '<br>' + 'Entry text: ' + teaser + '</p>' + '<ul><li>Vowel Count: ' + vowelCount + '<li>Consonant Count: ' + consonantCount + '<li>Word Count: ' + wordCount);
 
     });
   });
+
+$(document).ready(function(){
+  $('#time').text(moment());
+});

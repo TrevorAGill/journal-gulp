@@ -49,3 +49,5 @@ settings.gradle
 
 node_modules/
 .DS_Store
+bower_components/
+tmp/
